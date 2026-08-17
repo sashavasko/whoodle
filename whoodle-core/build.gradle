@@ -1,0 +1,16 @@
+dependencies {
+    testImplementation group: 'com.h2database', name: 'h2', version: '2.3.232'
+    testImplementation group: 'org.mockftpserver', name: 'MockFtpServer', version: '2.7.1'
+}
+
+tasks.register('printProps'){
+    project.properties.entrySet().forEach {
+        if (it.value instanceof String) {
+            String key = it.key
+            key = key.replace('.', '_')
+            String value = it.value
+            if (!key.contains("Token") && !key.contains("token"))
+                println " ${key} = \"${value}\";"
+        }
+    }
+}

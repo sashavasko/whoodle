@@ -1,0 +1,4 @@
+dependencies {
+    api group: 'org.apache.avro', name: 'avro', version: "${avroVersion}"
+    api("org.xerial.snappy:snappy-java:1.1.10.8")
+}
