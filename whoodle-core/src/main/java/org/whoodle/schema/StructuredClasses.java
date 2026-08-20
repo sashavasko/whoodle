@@ -18,7 +18,7 @@ public class StructuredClasses implements SchemaRegistry {
         this.introspector = introspector;
     }
 
-    public StructuredClasses getInstance(){
+    public static StructuredClasses getInstance(){
         return instance;
     }
 
